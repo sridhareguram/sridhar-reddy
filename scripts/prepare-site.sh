@@ -7,8 +7,13 @@ dir="${1:?site dir required}"
 base="${2:?base url required}"
 base="${base%/}"
 
+# Version stamp (commit id when available) so browsers and the Pages CDN never serve stale scripts or styles.
+ver="${GITHUB_SHA:-dev}"
+ver="${ver:0:8}"
+
 for f in "$dir"/*.html; do
   sed -i "s|__BASE_URL__|${base}|g" "$f"
+  sed -i -E "s#(assets/(css|js)/[A-Za-z0-9_.-]+\.(css|js))#\1?v=${ver}#g" "$f"
 done
 
 {

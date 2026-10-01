@@ -1,5 +1,5 @@
 Fonts used by this site (self-hosted, latin subset), all under the SIL Open Font License 1.1:
-- Fraunces (Undercase Type)  https://github.com/undercasetype/Fraunces
+- Bricolage Grotesque (Mathieu Triay)  https://github.com/ateliertriay/bricolage
 - Instrument Sans (Instrument)  https://github.com/Instrument/instrument-sans
 - Caveat (Impallari Type)  https://github.com/googlefonts/caveat
 Packaged via Fontsource: https://fontsource.org

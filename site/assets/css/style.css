@@ -1,18 +1,10 @@
-/* Sridhar's portfolio. Warm paper palette, serif voice, a little handwriting. */
+/* Sridhar's portfolio. Cool navy and teal palette, grotesque headlines, a little handwriting. */
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");
-  font-weight: 100 900;
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Fraunces";
-  src: url("../fonts/fraunces-latin-wght-italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -33,26 +25,34 @@
 }
 
 :root {
-  --paper: #f6efe2;
-  --paper-2: #efe5d2;
-  --card: #fbf7ee;
-  --ink: #211c16;
-  --muted: #655b4e;
-  --line: #dccfb6;
-  --accent: #2c4db0;
-  --accent-ink: #fffaf2;
+  --paper: #eef3f8;
+  --paper-2: #e2eaf3;
+  --card: #ffffff;
+  --ink: #0e1a2b;
+  --muted: #53627a;
+  --line: #ccd7e4;
+  --accent: #0b6e69;
+  --accent-ink: #ffffff;
   --ball: #c8431b;
-  --marker: #ffd75e;
-  --on-marker: #211c16;
-  --sticky: #fff0a8;
+  --marker: #b5efe1;
+  --on-marker: #0e1a2b;
+  --sticky: #ffe98f;
   --sticky-ink: #2a2410;
-  --sticky-accent: #243f99;
-  --sage: #4f7a5c;
-  --grass: #d4e3bd;
-  --grass-line: #9db683;
-  --grain: 0.07;
+  --sticky-accent: #0b6e69;
+  --sage: #0b8a5a;
+  --grass: #cfe8c4;
+  --grass-line: #8fba84;
+  --band: #0f1d3a;
+  --band-ink: #eaf1ff;
+  --band-muted: rgba(234, 241, 255, 0.74);
+  --band-accent: #6ee7d3;
+  --cta-from: #0f766e;
+  --cta-to: #1d4ed8;
+  --glow-1: rgba(45, 212, 191, 0.3);
+  --glow-2: rgba(96, 165, 250, 0.28);
+  --glow-3: rgba(250, 204, 21, 0.22);
 
-  --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  --display: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -64,47 +64,57 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #16120e;
-    --paper-2: #1e1812;
-    --card: #1f1912;
-    --ink: #f3eadb;
-    --muted: #b0a591;
-    --line: #382e24;
-    --accent: #8fa8ff;
-    --accent-ink: #0d1330;
+    --paper: #0a1120;
+    --paper-2: #0f1a2e;
+    --card: #121e36;
+    --ink: #e8eefc;
+    --muted: #9aa9c4;
+    --line: #243452;
+    --accent: #5eead4;
+    --accent-ink: #052b27;
     --ball: #ff8b5c;
-    --marker: rgba(255, 196, 64, 0.34);
-    --on-marker: #f3eadb;
-    --sticky: #4a3d17;
-    --sticky-ink: #f6ecc6;
-    --sticky-accent: #b9c8ff;
-    --sage: #8fc29d;
-    --grass: #26331f;
-    --grass-line: #4b6540;
-    --grain: 0.1;
+    --marker: rgba(94, 234, 212, 0.3);
+    --on-marker: #e8eefc;
+    --sticky: #4a3f12;
+    --sticky-ink: #fdf2c3;
+    --sticky-accent: #5eead4;
+    --sage: #5eead4;
+    --grass: #1f3a2c;
+    --grass-line: #3f7358;
+    --band: #0d2142;
+    --cta-from: #115e59;
+    --cta-to: #1e3a8a;
+    --glow-1: rgba(45, 212, 191, 0.16);
+    --glow-2: rgba(96, 165, 250, 0.16);
+    --glow-3: rgba(250, 204, 21, 0.1);
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --paper: #16120e;
-  --paper-2: #1e1812;
-  --card: #1f1912;
-  --ink: #f3eadb;
-  --muted: #b0a591;
-  --line: #382e24;
-  --accent: #8fa8ff;
-  --accent-ink: #0d1330;
+  --paper: #0a1120;
+  --paper-2: #0f1a2e;
+  --card: #121e36;
+  --ink: #e8eefc;
+  --muted: #9aa9c4;
+  --line: #243452;
+  --accent: #5eead4;
+  --accent-ink: #052b27;
   --ball: #ff8b5c;
-  --marker: rgba(255, 196, 64, 0.34);
-  --on-marker: #f3eadb;
-  --sticky: #4a3d17;
-  --sticky-ink: #f6ecc6;
-  --sticky-accent: #b9c8ff;
-  --sage: #8fc29d;
-  --grass: #26331f;
-  --grass-line: #4b6540;
-  --grain: 0.1;
+  --marker: rgba(94, 234, 212, 0.3);
+  --on-marker: #e8eefc;
+  --sticky: #4a3f12;
+  --sticky-ink: #fdf2c3;
+  --sticky-accent: #5eead4;
+  --sage: #5eead4;
+  --grass: #1f3a2c;
+  --grass-line: #3f7358;
+  --band: #0d2142;
+  --cta-from: #115e59;
+  --cta-to: #1e3a8a;
+  --glow-1: rgba(45, 212, 191, 0.16);
+  --glow-2: rgba(96, 165, 250, 0.16);
+  --glow-3: rgba(250, 204, 21, 0.1);
   color-scheme: dark;
 }
 
@@ -122,24 +132,16 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background:
+    radial-gradient(900px 520px at 88% -80px, var(--glow-1), transparent 70%),
+    radial-gradient(760px 480px at -8% 120px, var(--glow-2), transparent 70%),
+    var(--paper);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1.0625rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
-
-/* paper grain */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  pointer-events: none;
-  opacity: var(--grain);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 img,
@@ -172,8 +174,8 @@ a:hover {
 h1,
 h2,
 h3 {
-  font-family: var(--serif);
-  font-weight: 600;
+  font-family: var(--display);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0;
@@ -218,7 +220,7 @@ p {
 }
 
 .squig {
-  font-style: italic;
+  font-style: normal;
   color: var(--accent);
   text-decoration: underline wavy var(--accent);
   text-decoration-thickness: 2px;
@@ -329,7 +331,7 @@ p {
   gap: 2px;
   color: var(--ink);
   text-decoration: none;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -482,7 +484,7 @@ p {
 
 .hero h1 {
   font-size: clamp(2.6rem, 6.3vw, 4.7rem);
-  font-weight: 560;
+  font-weight: 700;
   letter-spacing: -0.035em;
   margin-bottom: 26px;
 }
@@ -629,7 +631,7 @@ p {
 
 .section-head h2 {
   font-size: clamp(2rem, 5vw, 3.3rem);
-  font-weight: 560;
+  font-weight: 700;
 }
 
 .section-head .num {
@@ -649,7 +651,7 @@ p {
 
 .page-title h1 {
   font-size: clamp(2.6rem, 7vw, 4.8rem);
-  font-weight: 560;
+  font-weight: 700;
   letter-spacing: -0.035em;
   margin-bottom: 16px;
 }
@@ -672,7 +674,7 @@ p {
 }
 
 .about-grid .big {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(1.35rem, 2.6vw, 1.7rem);
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -700,7 +702,7 @@ p {
 
 .edu b {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.12rem;
   font-weight: 600;
   line-height: 1.25;
@@ -755,7 +757,7 @@ p {
 
 .job-title {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.45rem;
   font-weight: 600;
   line-height: 1.2;
@@ -872,7 +874,7 @@ p {
 
 .show-text h3 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 560;
+  font-weight: 700;
   margin-bottom: 18px;
 }
 
@@ -1159,7 +1161,7 @@ p {
 
 .mini h3 {
   font-size: clamp(1.7rem, 3.5vw, 2.3rem);
-  font-weight: 560;
+  font-weight: 700;
 }
 
 .mini p {
@@ -1211,9 +1213,9 @@ p {
 
 .stat-num {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(3rem, 6vw, 4.4rem);
-  font-weight: 560;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
   margin-bottom: 14px;
@@ -1252,10 +1254,9 @@ p {
 }
 
 .toolbox dt {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 650;
   color: var(--accent);
 }
 
@@ -1281,7 +1282,7 @@ p {
 
 .hello-band h2 {
   font-size: clamp(2.6rem, 8vw, 5.6rem);
-  font-weight: 560;
+  font-weight: 700;
   letter-spacing: -0.035em;
   margin-bottom: 18px;
 }
@@ -1351,7 +1352,7 @@ p {
 }
 
 .repo b {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.2rem;
   font-weight: 600;
   word-break: break-word;
@@ -1588,7 +1589,7 @@ p {
 }
 
 .notfound .big {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(6rem, 24vw, 12rem);
   font-weight: 600;
   line-height: 0.9;
@@ -1652,7 +1653,6 @@ p {
 /* ---------- print ---------- */
 
 @media print {
-  body::before,
   .site-header,
   .site-footer,
   .cta-row,
@@ -1672,4 +1672,108 @@ p {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ---------- colour and depth ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 8%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, var(--glow-3), transparent 65%);
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+}
+
+.hero h1 {
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.brand {
+  letter-spacing: -0.03em;
+}
+
+.section.tint {
+  background: linear-gradient(180deg, var(--paper-2), transparent 90%);
+}
+
+#highlights {
+  background: var(--band);
+  color: var(--band-ink);
+  border-top: 0;
+}
+
+#highlights .section-head h2 {
+  color: var(--band-ink);
+}
+
+#highlights .num {
+  color: var(--band-accent);
+}
+
+#highlights .stat {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  backdrop-filter: blur(2px);
+}
+
+#highlights .stat-tag {
+  color: var(--band-accent);
+}
+
+#highlights .stat-num {
+  color: var(--band-ink);
+  background: linear-gradient(transparent 64%, rgba(110, 231, 211, 0.38) 64%, rgba(110, 231, 211, 0.38) 92%, transparent 92%);
+}
+
+#highlights .stat p {
+  color: var(--band-muted);
+}
+
+.hello-band {
+  background: linear-gradient(135deg, var(--cta-from), var(--cta-to));
+  color: #ffffff;
+  border-top: 0;
+}
+
+.hello-band h2 {
+  color: #ffffff;
+}
+
+.hello-band p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hello-band .btn {
+  border-color: #ffffff;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+  background: transparent;
+  color: #ffffff;
+}
+
+.hello-band .btn-primary {
+  background: #ffffff;
+  color: #0b2a4a;
+}
+
+.hello-band .btn:hover {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.site-footer {
+  border-top: 0;
+  background: var(--paper-2);
 }
