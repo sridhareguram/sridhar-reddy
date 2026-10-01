@@ -46,7 +46,11 @@
   function render() {
     var q = searchEl.value.trim().toLowerCase();
     var sort = sortEl.value;
+    var hidden = (cfg.hideRepos || []).map(function (n) {
+      return String(n).toLowerCase();
+    });
     var list = repos.filter(function (r) {
+      if (hidden.indexOf(r.name.toLowerCase()) !== -1) return false;
       if (!q) return true;
       return (
         r.name.toLowerCase().indexOf(q) !== -1 ||
