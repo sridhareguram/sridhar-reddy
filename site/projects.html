@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Sridhar Reddy Eguram</title>
+<meta name="description" content="Projects by Sridhar Reddy Eguram: CricClash, AURA, a RAG document tool and live GitHub repositories.">
+<meta name="theme-color" content="#16120e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6efe2" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects | Sridhar Reddy Eguram">
+<meta property="og:description" content="Projects by Sridhar Reddy Eguram: CricClash, AURA, a RAG document tool and live GitHub repositories.">
+<meta property="og:url" content="__BASE_URL__/projects.html">
+<meta property="og:image" content="__BASE_URL__/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="__BASE_URL__/projects.html">
+<link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="./assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="./index.html" aria-label="Sridhar Reddy Eguram, home">Sridhar<i>.</i></a>
+    <div class="nav-tools">
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./experience.html">Work</a></li>
+          <li><a href="./projects.html" aria-current="page">Projects</a></li>
+          <li><a href="./contact.html">Say hi</a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch between light and dark"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="container page-title">
+    <h1>Things I've <span class="squig">built</span></h1>
+    <p>A game, an AI companion and a few experiments, followed by a live feed of my public GitHub repositories.</p>
+  </section>
+  <section class="section" style="border-top:0">
+    <div class="container">
+    <div class="showcase">
+      <div class="show-text reveal">
+        <span class="hand show-tag">my side project</span>
+        <h3>CricClash</h3>
+        <p>A free cricket game that runs in the browser. I'm the sole developer: a React front end on Cloudflare Pages, a rules-based simulation engine written in vanilla JavaScript, and real-time Versus multiplayer over WebSockets on Cloudflare Workers and Durable Objects.</p>
+        <ul>
+          <li>Modes include Solo, Versus, Expert vs AI, Elite Pitch, Auction Trilogy and an IPL (T20) mode.</li>
+          <li>Every rating traces back to a researched season stat, and server-only datasets stay off the client.</li>
+          <li>The Man of the Match algorithm replicates real-world panel bias and is calibrated on 120 matches.</li>
+          <li>I build it with AI: Claude researches, diagnoses and drafts prompts, Cursor implements, and I check the result. Tests passed on one AI-built change while a bowler could still bowl past the legal overs limit in T20. I only caught it by playing real scenarios.</li>
+        </ul>
+        <p class="made-with">React, JavaScript, Cloudflare Pages, Workers and Durable Objects, WebSockets</p>
+        <div class="show-links"><a class="btn btn-primary" href="https://playcricclash.com" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Play CricClash</a></div>
+      </div>
+      <figure class="doodle reveal">
+        <svg viewBox="0 0 560 490" role="img" aria-labelledby="doodle-t">
+          <title id="doodle-t">A hand-drawn cricket field with notes about CricClash</title>
+          <defs>
+            <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="4"/>
+            </filter>
+          </defs>
+          <g filter="url(#wobble)">
+            <ellipse class="d-grass" cx="280" cy="250" rx="248" ry="196"/>
+            <ellipse class="d-thin" cx="280" cy="250" rx="160" ry="124"/>
+            <rect class="d-pitch" x="254" y="140" width="52" height="220" rx="3"/>
+            <path class="d-ink" d="M244 168h72M244 332h72"/>
+            <path class="d-ink" d="M271 136v14M280 136v14M289 136v14M271 350v14M280 350v14M289 350v14"/>
+            <circle class="d-dot" cx="150" cy="170" r="5"/><circle class="d-dot" cx="408" cy="162" r="5"/>
+            <circle class="d-dot" cx="118" cy="268" r="5"/><circle class="d-dot" cx="444" cy="278" r="5"/>
+            <circle class="d-dot" cx="196" cy="378" r="5"/><circle class="d-dot" cx="364" cy="384" r="5"/>
+            <circle class="d-dot" cx="214" cy="116" r="5"/><circle class="d-dot" cx="352" cy="108" r="5"/>
+            <circle class="d-dot" cx="280" cy="188" r="5"/>
+            <path class="d-ink" d="M292 196l16-12"/>
+            <path class="d-thin" d="M280 326C292 276 330 214 410 130"/>
+            <circle class="d-ball" cx="412" cy="128" r="9"/>
+          </g>
+          <text class="d-note" x="12" y="34">real-time Versus</text>
+          <text class="d-note" x="12" y="62">over WebSockets</text>
+          <path class="d-arrow" d="M150 74C190 98 218 122 246 150M236 134l12 18-22-4"/>
+          <text class="d-note" x="372" y="28">IPL mode: 40 real</text>
+          <text class="d-note" x="372" y="56">team-seasons,</text>
+          <text class="d-note" x="372" y="84">600 real players</text>
+          <path class="d-arrow" d="M454 96C460 112 452 126 428 134M440 138l-14 0 8-12"/>
+          <text class="d-note" x="12" y="440">Man of the Match,</text>
+          <text class="d-note" x="12" y="468">calibrated on 120 matches</text>
+          <path class="d-arrow" d="M178 424C214 408 240 392 262 366M246 370l16-6-2 16"/>
+        </svg>
+        <figcaption>a doodle of the field, not a screenshot</figcaption>
+      </figure>
+    </div>
+
+    <div class="showcase flip">
+      <div class="show-text reveal">
+        <span class="hand show-tag">from a hackathon</span>
+        <h3>AURA</h3>
+        <p>AURA, the Autonomous Understanding and Reflective Agent, is an empathetic multi-agent AI companion inspired by the film <em>Her</em>. It was built for the Luddy Hackathon (Case 4), and it listens to how you feel, writes about it, finds things to lift your mood and answers like it cares.</p>
+        <ul class="agents">
+          <li><b>Emotion Analyzer</b> classifies mood with a fine-tuned RoBERTa model.</li>
+          <li><b>Memory Agent</b> keeps mood history across sessions.</li>
+          <li><b>Journal Agent</b> writes timestamped poetic entries.</li>
+          <li><b>Curator Agent</b> finds media through YouTube, Spotify and Tavily.</li>
+          <li><b>Support Agent</b> replies with metaphor-rich empathy.</li>
+          <li><b>Fallback Agent</b> keeps things working when an API or model fails.</li>
+          <li><b>Base Agent</b> handles shared OpenAI access and prompts.</li>
+        </ul>
+        <p>The agents pass messages through a custom protocol that shares context and user history. A React dashboard shows what every agent is doing as it happens, and ElevenLabs adds voice in and out.</p>
+        <p class="made-with">Python, FastAPI, React, LangChain, OpenAI API, Hugging Face Transformers, ElevenLabs</p>
+        <div class="show-links">
+          <a class="btn btn-primary" href="https://github.com/fanisridhar/AURA" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg> Source on GitHub</a>
+          <a class="link-arrow" href="https://devpost.com/software/aura-the-empathetic-ai" target="_blank" rel="noopener noreferrer">Devpost write-up</a>
+        </div>
+      </div>
+      <div class="gallery reveal" data-gallery data-items='[{"id":"s1","remote":"https://github.com/user-attachments/assets/98b7a677-0139-4034-8886-0fc8530ac97e","label":"Chat","caption":"Talking to AURA, with each agent&#39;s status alongside."},{"id":"s2","remote":"https://github.com/user-attachments/assets/338c0c5b-8c49-4261-bb77-c5a01c4f8080","label":"Curated media","caption":"Songs, videos and articles picked to match the mood."},{"id":"s3","remote":"https://github.com/user-attachments/assets/3681abdc-ec45-4c02-be6a-78725a4e4c0b","label":"Journal","caption":"Poetic journal entries written from how you feel."},{"id":"s4","remote":"https://github.com/user-attachments/assets/5eb4e929-22f6-4c77-a931-fd3c63511d25","label":"Mood timeline","caption":"Mood over time, so patterns are easy to see."},{"id":"s5","remote":"https://github.com/user-attachments/assets/4e61fda0-e9ad-4abb-9b59-e4a4638f28a7","label":"Agent log","caption":"The raw output of every agent. Nothing hidden."},{"id":"arch","remote":"https://github.com/user-attachments/assets/900b3bd2-b92b-4821-a899-d02996db1104","label":"Architecture","caption":"How the agents pass work to each other."}]'>
+        <figure class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span>AURA dashboard</span></div>
+          <div class="shot">
+            <img src="https://github.com/user-attachments/assets/98b7a677-0139-4034-8886-0fc8530ac97e" alt="Screenshot of AURA: Talking to AURA, with each agent's status alongside." width="1600" height="1000" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <p class="missing">The screenshot could not load. <a href="https://github.com/fanisridhar/AURA#screenshots" rel="noopener noreferrer">See it in the README.</a></p>
+          </div>
+        </figure>
+        <p class="shot-caption" aria-live="polite">Talking to AURA, with each agent's status alongside.</p>
+        <ul class="thumbs" aria-label="AURA screenshots">
+          <li><button type="button" data-index="0" aria-pressed="true">Chat</button></li>
+          <li><button type="button" data-index="1" aria-pressed="false">Curated media</button></li>
+          <li><button type="button" data-index="2" aria-pressed="false">Journal</button></li>
+          <li><button type="button" data-index="3" aria-pressed="false">Mood timeline</button></li>
+          <li><button type="button" data-index="4" aria-pressed="false">Agent log</button></li>
+          <li><button type="button" data-index="5" aria-pressed="false">Architecture</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini reveal">
+      <h3>RAG document tool</h3>
+      <div>
+        <p>A retrieval-augmented tool for asking questions over documents, using Pinecone and the OpenAI API. It calls the model directly and copes with unreliable or malformed output.</p>
+        <p class="made-with">Pinecone, OpenAI API, RAG</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="section" id="github">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2><span class="num">live</span>My GitHub</h2>
+        <a class="link-arrow" href="https://github.com/fanisridhar" rel="noopener noreferrer">View profile</a>
+      </div>
+      <div class="toolbar">
+        <label class="sr-only" for="repo-search">Search repositories</label>
+        <input id="repo-search" type="search" placeholder="Search by name, description or language" autocomplete="off">
+        <label class="sr-only" for="repo-sort">Sort repositories</label>
+        <select id="repo-sort">
+          <option value="updated">Recently updated</option>
+          <option value="stars">Most starred</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+      <p class="status" id="repo-status" role="status" hidden></p>
+      <div class="repo-grid" id="repo-grid" aria-live="polite">
+        <noscript><p class="status">Enable JavaScript to see live repositories, or <a href="https://github.com/fanisridhar">visit GitHub</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span><span class="hand sign">Sridhar</span> &nbsp; &copy; <span data-year>2026</span> Sridhar Reddy Eguram. Set in Fraunces, Instrument Sans and Caveat.</span>
+    <ul class="footer-links">
+      <li><a href="https://github.com/fanisridhar" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/sridhar-reddy-e-b6ab89387" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="#" data-email>Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/github.js"></script>
+</body>
+</html>
